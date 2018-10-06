@@ -18,3 +18,15 @@ When writing the simulation, you should consider how the code might support exte
 We do not expect you to produce a graphical interface or output for the task - simple console output is fine. However, you should think carefully about how your design would support a graphical interface in the future. 
 
 You should also demonstrate how your code has been tested.
+
+## The Game of Rock Paper Scissors
+Rock-Paper-Scissors is usually played between two people who, after a count of three, simultaneously make one of three hand gestures:
+- A closed fist to indicate a Rock
+- A flat hand to indicate Paper
+- Two fingers extended to represent Scissors
+
+If both players make the same gesture, then the round is a draw. If the gestures are different, then the winner is decided as follows:
+- Paper beats Rock as Paper wraps Rock
+- Rock beats Scissors as Rock blunts Scissors
+- Scissors beats Paper as Scissors cut Paper
+
