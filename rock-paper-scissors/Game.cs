@@ -24,9 +24,11 @@ namespace RockPaperScissors
         public async Task<IEnumerable<Turn>> RunRound()
         {
             _Round++;
+            // Wait for all players to play their turn
             var turns = await Task.WhenAll(_Players.Select(async p => new Turn(p, await p.GetGesture())));
+            // and then score the turns
             _Scorer.Update(turns);
-
+            // Allow the players to do any learning if necessary
             await Task.WhenAll(_Players.Select(async p => await p.Learn(turns)));
             return turns;
         }
